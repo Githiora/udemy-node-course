@@ -46,6 +46,22 @@ app.get(`/weather`, (req, res) => {
     })
 })
 
+app.get(`/help/*`, (req, res) => {
+    res.render(`404`, {
+        title: `404`,
+        name: `Gabriel Wamunyu`,
+        errorMessage: `Help article not found`
+    });
+})
+
+app.get(`*`, (req, res) => {
+    res.render(`404`, {
+        title: `404`,
+        name: `Gabriel Wamunyu`,
+        errorMessage: `Page not found`
+    });
+})
+
 
 app.listen(3030, () => {
     console.log(`server listening on port 3030`)
