@@ -1,5 +1,5 @@
 const geocode = require(`./utils/geocode`);
-const forecast = require(`./utils/forecast`)
+const forecast = require(`./utils/forecast`);
 
 
 geocode(`Chattanooga`, (error, { latitude, longitude, location }) => {
