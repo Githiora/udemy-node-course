@@ -6,6 +6,7 @@ const forecast = require(`./utils/forecast`);
 
 
 const app = express();
+const port = process.env.PORT || 3030;
 
 // Define paths for Express config
 const publicDirectoryPath = path.join(__dirname, `../public`);
@@ -101,6 +102,6 @@ app.get(`*`, (req, res) => {
 })
 
 
-app.listen(3030, () => {
+app.listen(port, () => {
     console.log(`server listening on port 3030`)
 })
